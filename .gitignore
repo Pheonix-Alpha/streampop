@@ -1,41 +1,60 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
+# Dependencies
+node_modules/
+.pnpm/
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# Build outputs
+.next/
+dist/
+out/
+build/
+.next/cache/
 
-# next.js
-/.next/
-/out/
+# Environment files
+.env*
+.env.local
+.env.*.local
 
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Testing
+coverage/
 
-# vercel
-.vercel
+# Editor/IDE
+.vscode/
+.idea/
 
-# typescript
+# OS-specific
+.DS_Store
+Thumbs.db
+*.swp
+
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Deployment
+.vercel
+
+# Clerk (Auth)
+.clerk/
+
+# MongoDB dumps
+dump/
+*.lock
+
+# Cloudinary (optional local caching)
+cloudinary-cache/
+
+# Optional: Ignore uploads if stored locally
+uploads/
+public/uploads/
