@@ -12,9 +12,9 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     console.log('Request Body:', body);
 
-    const { caption, videoUrl, userId } = body;
+    const { caption, videoUrl, userId,username } = body;
 
-    const newVideo = new Video({ caption, videoUrl, userId });
+    const newVideo = new Video({ caption, videoUrl, userId,username });
     await newVideo.save();
 
     return NextResponse.json({ message: 'Video saved successfully' }, { status: 201 });

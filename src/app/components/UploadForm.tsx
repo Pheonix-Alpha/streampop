@@ -43,6 +43,7 @@ const UploadForm = () => {
         caption,
         videoUrl,
         userId,
+        username: user?.username || user?.firstName || 'Anonymous',
       });
 
       alert('Upload successful!');
